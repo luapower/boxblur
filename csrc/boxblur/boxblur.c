@@ -1,9 +1,11 @@
-//go@ gcc boxblur.c -O3 -o ../../bin/boxblur.dll -shared
+//go@ gcc boxblur.c -O3 -o ../../bin/mingw32/boxblur.dll -shared
 //Box Blur Algorithm by Mario Klingemann http://incubator.quasimondo.com
 
 #include <stdint.h>
 #include <stdlib.h>
-#include "branchless.c"
+
+#define min(x, y) (((x) < (y)) ? (x) : (y))
+#define max(x, y) (((x) > (y)) ? (x) : (y))
 
 void boxblur_8888(uint8_t *pix, int32_t w, int32_t h, int32_t radius, int32_t times) {
 	if (radius < 1 || radius > 256) return;
