@@ -1,1 +1,1 @@
-gcc $CFLAGS boxblur.c -shared -o ../../bin/linux32/boxblur.so
+gcc $CFLAGS boxblur.c -shared -o ../../bin/linux32/libboxblur.so
