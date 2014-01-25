@@ -1,0 +1,12 @@
+*
+!/bin/
+!/csrc/
+!/bin/mingw32/
+!/bin/linux32/
+!/media/
+
+!/*blur*
+!/bin/mingw32/*blur*
+!/bin/linux32/*blur*
+!/csrc/*blur/
+!/csrc/*blur/**
