@@ -12,7 +12,7 @@ source_img = bitmap.copy(source_img, 'bgra8', false, true)
 
 function player:on_render()
 	local img = bitmap.copy(source_img)
-	local radius = math.floor((self.mousex or 1) / 10)+1
+	local radius = math.floor((self.mousex or 1) / 100)+1
 	for i=1,2 do
 		--stackblur(img.data, img.w, img.h, radius)
 		boxblur(img.data, img.w, img.h, radius)
