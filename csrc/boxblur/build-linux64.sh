@@ -1,1 +1,1 @@
-../gcc-linux64 boxblur.c -shared -o ../../bin/linux64/libboxblur.so
+gcc -O2 -s -static-libgcc -fPIC boxblur.c -shared -o ../../bin/linux64/libboxblur.so
