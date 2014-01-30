@@ -3,10 +3,12 @@
 !/csrc/
 !/bin/mingw32/
 !/bin/linux32/
+!/bin/linux64/
 !/media/
 
 !/*blur*
 !/bin/mingw32/*blur*
 !/bin/linux32/*blur*
+!/bin/linux64/*blur*
 !/csrc/*blur/
 !/csrc/*blur/**
