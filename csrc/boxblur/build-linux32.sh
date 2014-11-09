@@ -1,1 +1,1 @@
-gcc -O2 -s -static-libgcc -fPIC boxblur.c -shared -o ../../bin/linux32/libboxblur.so
+P=linux32 L="-s -static-libgcc" D=libboxblur.so A=libboxblur.a ./build.sh

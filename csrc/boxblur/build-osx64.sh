@@ -1,1 +1,2 @@
-gcc -arch x86_64 -O2 boxblur.c -shared -install_name @loader_path/libboxblur.dylib -o ../../bin/osx64/libboxblur.dylib
+P=osx64 C="-arch x86_64" L="-arch x86_64 -install_name @loader_path/libboxblur.dylib" \
+	D=libboxblur.dylib A=libboxblur.a ./build.sh

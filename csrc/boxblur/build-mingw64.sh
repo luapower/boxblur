@@ -1,1 +1,1 @@
-gcc -O2 -s -static-libgcc boxblur.c -shared -o ../../bin/mingw64/boxblur.dll
+P=mingw64 L="-s -static-libgcc" D=boxblur.dll A=boxblur.a ./build.sh
