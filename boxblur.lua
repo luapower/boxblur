@@ -117,8 +117,8 @@ function blur:update()
 end
 
 function blur:blur(radius, passes)
-	radius = radius or self.max_radius
-	passes = passes or self.default_passes
+	radius = radius or self.max_radius or 1
+	passes = passes or self.default_passes or 1
 	assert(radius >= 0 and radius <= self.max_radius)
 	assert(passes >= 0 and passes <= 10)
 	if self._valid and radius == self.radius and passes == self.passes then
@@ -128,12 +128,12 @@ function blur:blur(radius, passes)
 		self.passes = 0
 		bitmap.paint(self.dst, self.src)
 	elseif passes == 1 then
-		self.radius = radius
-		self.passes = 1
 		if not self._valid then
 			self:update()
 			self._valid = true
 		end
+		self.radius = radius
+		self.passes = 1
 		self:_blur(self.src, self.dst)
 	else
 		self:update()

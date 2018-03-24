@@ -4,12 +4,12 @@ local bitmap = require'bitmap'
 local boxblur = require'boxblur'
 local nw = require'nw'
 
-local passes = 2
+local passes = 1
 local max_radius = 50
 local repeats = max_radius
 
 local img = jpeg.load'media/jpeg/birds.jpg'
-local blur = boxblur.new(img, max_radius, passes, 'bgra8')
+local blur = boxblur.new(img, max_radius, passes, 'g8')
 blur:update()
 
 local t0 = time.clock()
