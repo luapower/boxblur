@@ -30,7 +30,6 @@ local win = nw:app():window{w = 1800, h = 1000, visible = false}
 
 function win:repaint()
 	local radius = math.floor((self:mouse'x' or 1) / 20) - 10
-	radius = math.min(math.max(radius, 0), max_radius)
 	local blurred = blur:blur(radius)
 	local winbmp = self:bitmap()
 	bitmap.paint(winbmp, blur.src.parent, 0, 0)

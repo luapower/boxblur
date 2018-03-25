@@ -135,7 +135,7 @@ function blur:_repaint()
 end
 
 function blur:blur(radius, passes)
-	radius = math.min(math.max(radius or self.max_radius, 0), 255)
+	radius = math.min(math.max(radius or self.max_radius, 0), self.max_radius)
 	passes = math.min(math.max(passes or self.default_passes or 1, 0), 10)
 	if self._valid and radius == self.radius and passes == self.passes then
 		--nothing changed
